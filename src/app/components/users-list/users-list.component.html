@@ -1,0 +1,33 @@
+<div class="users-list-container">
+    <h1>Users List</h1>
+
+    <div *ngIf="dataSource.data.length === 0" class="not-found-message">
+      <p>No users found</p>
+    </div>
+
+    <div *ngIf="dataSource.data.length > 0" class="row g-4">
+      <div class="col-4 rounded p-1" *ngFor="let user of dataSource.data" (click)="viewUserDetails(user.id)" appHighlight>
+        <div class="card-container">
+          <mat-card class="user-card" @fadeInOut>
+            <mat-card-header class="card-header">
+              <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+              <mat-card-subtitle>ID: {{ user.id }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="user.avatar" alt="Avatar" class="avatar-image">
+            <mat-card-content class="card-content">
+              <p>Email: {{ user.email }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <mat-paginator
+    [length]="totalUsers"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[6, 12]"
+    (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
+
+

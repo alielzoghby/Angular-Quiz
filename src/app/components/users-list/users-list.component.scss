@@ -1,0 +1,71 @@
+.users-list-container {
+  padding: 1rem 3rem;
+  margin: auto;
+  mat-paginator {
+    margin-top: 20px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .user-card {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .card-header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+  }
+
+  .card-header mat-card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-header mat-card-subtitle {
+    color: #666;
+  }
+
+  .avatar-image {
+    height: 450px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .card-content {
+    padding: 16px;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .mat-paginator {
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mat-paginator-range-label {
+    margin: 0 16px;
+  }
+
+  .mat-paginator .mat-select {
+    min-width: 60px;
+  }
+
+  .mat-paginator .mat-form-field {
+    margin: 0;
+  }
+  .not-found-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #757575;
+  }
+}
+
